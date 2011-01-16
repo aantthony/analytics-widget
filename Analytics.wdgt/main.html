@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleAnimator.js" charset="utf-8"></script>
+    <script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleButton.js" charset="utf-8"></script>
+    <script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleInfoButton.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="main.css">
+    <script type="text/javascript" src="Parts/parts.js" charset="utf-8"></script>
+    <script type="text/javascript" src="localizedStrings.js" charset="utf-8"></script>
+    <script type="text/javascript" src="main.js" charset="utf-8"></script>
+    <script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleSlider.js" charset="utf-8"></script>
+</head>
+<body onload="load();">
+    <div id="front">
+        <img id="frontImg" src="Parts/Images/front.png" alt="">
+        <canvas id="canvas" width="401" height="148" onmouseout="mousestop(event)" onmousemove="mouseinmove(event)" onmouseover="mouseinmove(event)"></canvas>
+        <div id="text1" style="text-decoration:underline;" onclick="accesss(event)"></div>
+        <div id="image"><img src="Images/animated.gif" id="inner_image"></div>
+        <div id="info"></div>
+    </div>
+    <div id="back">
+        <img id="backImg" src="Parts/Images/back.png" alt="">
+        <div id="box">
+            <div id="text2"></div>
+        </div>
+        <div id="done"></div>
+        <input id="username" type="text" name="" value="">
+        <input id="password" onkeydown="if(event.which==13){loginbutton()}" type="password" name="" value="">
+        <select id="accounts" onchange="changeaccount(event)" name="">
+            <option>Please login first</option>
+        </select>
+        <div id="status" onclick="maybethereisalinkhere(event)"></div>
+        <div id="detail"></div>
+        <select id="gtypedsel" onchange="changegtype(event)">
+            <option value="visits" selected="selected">Visits</option>
+            <option value="visitors">Visitors</option>
+            <option value="pageviews">Pageviews</option>
+            <option value="average_pageviews">Average Pageviews</option>
+            <option value="unique_visitors">Unique Visitors</option>
+            <option value="time_on_site">Time on site</option>
+            <option value="bounce_rate">Bounce Rate</option>
+            <option value="direct_sources">Direct Traffic</option>
+            <option value="campaigns">Campaign Traffic</option>
+            <option value="adsense_trending_revenue">Adsense Revenue</option>
+            <option value="adsense_trending_page_impressions">Adsense Page Impressions</option>
+            <option value="adsense_trending_unit_impressions">Adsense Unit Impressions</option>
+            <option value="adsense_trending_clicks">Adsense Clicks</option>
+            <option value="adsense_trending_ctr">Adsense CTR</option>
+            <option value="adsense_trending_ecpm">Adsense eCPM</option>
+            <option value="goal_detail:-1">Goal Completions</option>
+            <option value="goal_detail:1">Goal 1 Conversions</option>
+            <option value="goal_detail:2">Goal 2 Conversions</option>
+            <option value="goal_detail:3">Goal 3 Conversions</option>
+            <option value="events">Events</option>
+        </select>
+        <div id="button"></div>
+        <div id="checkbox">
+            <input onchange="checkchange()" id="realcheckbox" name="realcheckbox" type="checkbox" checked="checked">
+            <div id="div"><label for="realcheckbox">Require login</label></div>
+        </div>
+        <input id="nopass" onkeydown="if(event.which==13){sfajclick(event)}" type="text" name="" value="ga:1234">
+        <div id="ca"></div>
+        <input id="days" type="text" name="" value="30">
+        <div id="text"></div>
+        <div id="updatecheck"></div>
+        <select id="stylechooser" onchange="changestylechooser(event)">
+            <option id="option1" value="2" selected="selected">Default (Dark)</option>
+            <option id="option" value="1">Analytics (white)</option>
+        </select>
+        <div id="text3"></div>
+    </div>
+</body>
+</html>
